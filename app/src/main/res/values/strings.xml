@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FirstAnimations</string>
+    <string name="bartSimpsonImageDesc">Bart Simpson Image</string>
+    <string name="title_activity_connect3_game">connect3Game</string>
+    <string name="title_activity_video">Video</string>
+    <string name="title_activity_animations">Animations</string>
+    <string name="title_activity_audio_player">AudioPlayer</string>
+    <string name="title_activity_youtube_api">YoutubeAPI</string>
+</resources>

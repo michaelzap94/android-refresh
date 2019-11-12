@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.firstanimations">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".BasicFrenchPhrases"></activity>
+        <activity
+            android:name=".BasicCalculator"
+            android:label="Basic Calculator"></activity>
+        <activity
+            android:name=".YoutubeActivity"
+            android:label="Youtube Player"></activity>
+        <activity
+            android:name=".StandaloneActivity"
+            android:label="Standalone Activity"></activity>
+        <activity
+            android:name=".YoutubeAPI"
+            android:label="@string/title_activity_youtube_api"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MainActivity" />
+        </activity>
+        <activity
+            android:name=".AudioPlayer"
+            android:label="@string/title_activity_audio_player"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Animations"
+            android:label="@string/title_activity_animations"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Video"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MainActivity" />
+        </activity>
+        <activity
+            android:name=".ConnectGame"
+            android:label="@string/title_activity_connect3_game"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MainActivity" />
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
