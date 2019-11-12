@@ -53,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, BasicFrenchPhrases.class);
         startActivity(intent);
     }
+
+    public void intentListViewDemo(View view){
+        Intent intent = new Intent(MainActivity.this, ListViewDemo.class);
+        startActivity(intent);
+    }
+
+    public void intentEggTimer(View view){
+        Intent intent = new Intent(MainActivity.this, EggTimer.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;

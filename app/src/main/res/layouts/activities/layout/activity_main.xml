@@ -55,7 +55,6 @@
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
             android:onClick="toggleAudio"
-            android:tag="0"
             android:text="Play Audio" />
 
         <Button
@@ -64,7 +63,6 @@
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
             android:onClick="intentYoutube"
-            android:tag="0"
             android:text="YoutubeAPI" />
 
         <Button
@@ -73,7 +71,6 @@
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
             android:onClick="intentCalculator"
-            android:tag="0"
             android:text="Calculator" />
 
         <Button
@@ -82,7 +79,6 @@
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
             android:onClick="intentFrenchPhrases"
-            android:tag="0"
             android:text="French P" />
 
         <Button
@@ -90,30 +86,28 @@
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
-            android:tag="0"
-            android:text="Button" />
+            android:onClick="intentListViewDemo"
+            android:text="1 ListView" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
-            android:tag="0"
-            android:text="Button" />
+            android:onClick="intentEggTimer"
+            android:text="Egg Timer" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
             android:layout_margin="5dp"
-            android:tag="0"
             android:text="Button" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:tag="0"
             android:text="Button"
             android:layout_margin="5dp" />
 

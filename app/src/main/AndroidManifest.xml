@@ -11,16 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BasicFrenchPhrases"></activity>
+        <activity android:name=".EggTimer"></activity>
+        <activity android:name=".ListViewDemo" />
+        <activity android:name=".BasicFrenchPhrases" />
         <activity
             android:name=".BasicCalculator"
-            android:label="Basic Calculator"></activity>
+            android:label="Basic Calculator" />
         <activity
             android:name=".YoutubeActivity"
-            android:label="Youtube Player"></activity>
+            android:label="Youtube Player" />
         <activity
             android:name=".StandaloneActivity"
-            android:label="Standalone Activity"></activity>
+            android:label="Standalone Activity" />
         <activity
             android:name=".YoutubeAPI"
             android:label="@string/title_activity_youtube_api"
