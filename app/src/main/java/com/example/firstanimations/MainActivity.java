@@ -63,6 +63,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, EggTimer.class);
         startActivity(intent);
     }
+
+    public void intentWebDownload(View view){
+        Intent intent = new Intent(MainActivity.this, WebDownload.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;
