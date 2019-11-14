@@ -68,6 +68,21 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, WebDownload.class);
         startActivity(intent);
     }
+
+    public void intentTODO(View view){
+        Intent intent = new Intent(MainActivity.this, WebDownload.class);
+        startActivity(intent);
+    }
+
+    public void intentMapBasic(View view){
+        Intent intent = new Intent(MainActivity.this, MapsActivity.class);
+        startActivity(intent);
+    }
+
+    public void intentSharedPref(View view){
+        Intent intent = new Intent(MainActivity.this, SharedPreferencesBasic.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;

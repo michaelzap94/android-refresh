@@ -6,4 +6,6 @@
     <string name="title_activity_animations">Animations</string>
     <string name="title_activity_audio_player">AudioPlayer</string>
     <string name="title_activity_youtube_api">YoutubeAPI</string>
+    <string name="title_activity_shared_preferences">SharedPreferences</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

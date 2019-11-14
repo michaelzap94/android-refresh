@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:id="@+id/mainLinearLayout"
-    >
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <GridLayout
         android:id="@+id/gridLayoutConnectGame"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:columnCount="3"
-        android:rowCount="5">
+        android:rowCount="10">
 
         <Button
             android:id="@+id/button5"
             android:layout_height="50dp"
             android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentConnect3Game"
             android:text="Connect3 Game" />
 
@@ -26,7 +24,6 @@
             android:id="@+id/button8"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentAnimations"
             android:text="Animations" />
 
@@ -35,7 +32,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentVideo"
             android:text="VideoPlayer" />
 
@@ -44,7 +40,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentAudio"
             android:text="AudioPlayer" />
 
@@ -53,7 +48,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="toggleAudio"
             android:text="Play Audio" />
 
@@ -61,7 +55,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentYoutube"
             android:text="YoutubeAPI" />
 
@@ -69,7 +62,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentCalculator"
             android:text="Calculator" />
 
@@ -77,7 +69,6 @@
             android:layout_width="0dp"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentFrenchPhrases"
             android:text="French P" />
 
@@ -85,7 +76,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentListViewDemo"
             android:text="1 ListView" />
 
@@ -93,7 +83,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentEggTimer"
             android:text="Egg Timer" />
 
@@ -101,7 +90,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentWebDownload"
             android:text="WebDownload" />
 
@@ -109,8 +97,49 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:text="Button"
-            android:layout_margin="5dp" />
+            android:layout_margin="5dp"
+            android:onClick="intentTODO"
+            android:text="TODO" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="5dp"
+            android:onClick="intentTODO"
+            android:text="TODO" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="5dp"
+            android:onClick="intentTODO"
+            android:text="TODO" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="5dp"
+            android:onClick="intentMapBasic"
+            android:text="Maps" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="5dp"
+            android:onClick="intentTODO"
+            android:text="TODO" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:layout_margin="5dp"
+            android:onClick="intentSharedPref"
+            android:text="SharedPref" />
 
 
     </GridLayout>
