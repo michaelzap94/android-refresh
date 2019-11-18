@@ -8,4 +8,5 @@
     <string name="title_activity_youtube_api">YoutubeAPI</string>
     <string name="title_activity_shared_preferences">SharedPreferences</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps_memorable_places">Map</string>
 </resources>

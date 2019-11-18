@@ -79,6 +79,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void intentMemorablePlaces(View view){
+        Intent intent = new Intent(MainActivity.this, MemorablePlaces.class);
+        startActivity(intent);
+    }
+
+    public void intentHikersWatch(View view){
+        Intent intent = new Intent(MainActivity.this, HikersWatch.class);
+        startActivity(intent);
+    }
+
     public void intentSharedPref(View view){
         Intent intent = new Intent(MainActivity.this, SharedPreferencesBasic.class);
         startActivity(intent);

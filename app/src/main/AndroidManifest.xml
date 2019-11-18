@@ -31,6 +31,17 @@
             android:value="@string/google_maps_key" />
 
         <activity
+            android:name=".MapsActivityMemorablePlaces"
+            android:label="@string/title_activity_maps_memorable_places">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.MemorablePlaces" />
+        </activity>
+        <activity
+            android:name=".HikersWatch"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".MemorablePlaces" />
+        <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps">
             <meta-data
