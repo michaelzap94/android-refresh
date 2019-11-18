@@ -38,7 +38,7 @@ public class MemorablePlaces extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent newIntent = new Intent(getApplicationContext(), MapsActivity.class);
+                Intent newIntent = new Intent(getApplicationContext(), MapsActivityMemorablePlaces.class);
                 newIntent.putExtra("positionForLocations", position);
                 startActivity(newIntent);
             }
