@@ -2,7 +2,9 @@ package com.example.firstanimations;
 
 import androidx.fragment.app.FragmentActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.icu.text.SimpleDateFormat;
 import android.location.Address;
 import android.location.Geocoder;
@@ -19,6 +21,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
@@ -53,8 +56,10 @@ public class MapsActivityMemorablePlaces extends FragmentActivity implements OnM
         String address = getAddress(latLng);
 
         // Add a marker in Sydney and move the camera
-        mMap.addMarker(new MarkerOptions().position(latLng).title(String.format("%s",address)));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
+        //mMap.addMarker(new MarkerOptions().position(latLng).title(String.format("%s",address)));
+        mMap.addMarker(new MarkerOptions().position(latLng).title(String.format("%s",address)).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_YELLOW)));
+
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng,15));
     }
 
     public String getAddress(LatLng latLng){
@@ -101,7 +106,8 @@ public class MapsActivityMemorablePlaces extends FragmentActivity implements OnM
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-
+        // Sets a Google onlongpressed listener since we are IMPLEMENTING GoogleMap.OnMapLongClickListener
+        mMap.setOnMapLongClickListener(this);
         //Get the LatLong Object from the static locations ArrayList in MemorablePlaces
         showMarkerFirstTime(MemorablePlaces.locations.get(positionForLocations));
     }
@@ -118,14 +124,50 @@ public class MapsActivityMemorablePlaces extends FragmentActivity implements OnM
                 .title(address)
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
-        MemorablePlaces.places.add(location.toString());
+        MemorablePlaces.places.add(address);
         MemorablePlaces.locations.add(location);
 
         //updates the arrayAdapter
         MemorablePlaces.arrayAdapter.notifyDataSetChanged();
 
+        //Save the locations and places INTO SharedPreferences:
+
+        //1) Initialize the sharedPreferences
+        SharedPreferences sharedPreferences = this.getSharedPreferences("com.example.firstanimations", Context.MODE_PRIVATE);
+        //2) Serialize the ArrayList Object and then put it in the sharedPreferences
+        try {
+            String serializedStringPlaces = ObjectSerializer.serialize(MemorablePlaces.places);//Serialize(convert to String) the MemorablePlaces.places ArrayList Object.
+            sharedPreferences.edit().putString("places", serializedStringPlaces).apply();//Store the Serialized version in my SharedPreferences file.
+
+            //Our Serialize object only supports ArrayList of Strings
+            //String serializedStringLocations = ObjectSerializer.serialize(MemorablePlaces.locations);//Serialize(convert to String) the MemorablePlaces.places ArrayList Object.
+            //sharedPreferences.edit().putString("locations", serializedStringPlaces).apply();//Store the Serialized version in my SharedPreferences file.
+
+            ArrayList<String> latitudes = new ArrayList<>();
+            ArrayList<String> longitudes = new ArrayList<>();
+
+            for(LatLng coords: MemorablePlaces.locations){
+                latitudes.add(Double.toString(coords.latitude));
+                longitudes.add(Double.toString(coords.longitude));
+            }
+
+            String serializedStringLatitdes = ObjectSerializer.serialize(latitudes);//Serialize(convert to String) the MemorablePlaces.places ArrayList Object.
+            String serializedStringLongitudes = ObjectSerializer.serialize(longitudes);//Serialize(convert to String) the MemorablePlaces.places ArrayList Object.
+
+            sharedPreferences.edit().putString("latitudes", serializedStringLatitdes).apply();//Store the Serialized version in my SharedPreferences file.
+            sharedPreferences.edit().putString("longitudes", serializedStringLongitudes).apply();//Store the Serialized version in my SharedPreferences file.
+
+            Log.d("Serialized Places: ", serializedStringPlaces);
+            Log.d("Serialized latitudes: ", serializedStringLatitdes);
+            Log.d("Serialized longitudes: ", serializedStringLongitudes);
+
+
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
         Toast.makeText(getApplicationContext(),
-                "New marker added at " + location.toString(), Toast.LENGTH_LONG)
+                location.toString(), Toast.LENGTH_LONG)
                 .show();
     }
 

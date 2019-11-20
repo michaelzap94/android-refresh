@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -89,10 +88,16 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void intentSharedPref(View view){
-        Intent intent = new Intent(MainActivity.this, SharedPreferencesBasic.class);
+    public void intentActionBar(View view){
+        Intent intent = new Intent(MainActivity.this, PrefsActBarDialog.class);
         startActivity(intent);
     }
+
+    public void intentBasicNotes(View view){
+        Intent intent = new Intent(MainActivity.this, BasicNotes.class);
+        startActivity(intent);
+    }
+
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;

@@ -97,7 +97,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentTODO"
             android:text="TODO" />
 
@@ -105,7 +104,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentTODO"
             android:text="TODO" />
 
@@ -113,7 +111,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentTODO"
             android:text="TODO" />
 
@@ -121,7 +118,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentMapBasic"
             android:text="Maps" />
 
@@ -129,7 +125,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentHikersWatch"
             android:text="Maps Hiker" />
 
@@ -137,7 +132,6 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
             android:onClick="intentMemorablePlaces"
             android:text="Maps Places" />
 
@@ -145,10 +139,33 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:layout_margin="5dp"
-            android:onClick="intentSharedPref"
-            android:text="SharedPref" />
+            android:onClick="intentActionBar"
+            android:text="SP|A.BAR|DLG" />
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="intentBasicNotes"
+            android:text="BasicNotes" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="intentActionBar"
+            android:text="SharedPref" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="intentActionBar"
+            android:text="SharedPref" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="intentActionBar"
+            android:text="SharedPref" />
 
     </GridLayout>
 
