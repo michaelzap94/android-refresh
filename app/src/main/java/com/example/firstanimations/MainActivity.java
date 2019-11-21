@@ -98,6 +98,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void intentNewsReaderBasic(View view){
+        Intent intent = new Intent(MainActivity.this, NewsReader.class);
+        startActivity(intent);
+    }
+
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;
