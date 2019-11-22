@@ -103,6 +103,11 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void intentInstagramClone(View view){
+        Intent intent = new Intent(MainActivity.this, InstagramClone.class);
+        startActivity(intent);
+    }
+
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;

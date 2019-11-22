@@ -158,8 +158,8 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:onClick="intentActionBar"
-            android:text="SharedPref" />
+            android:onClick="intentInstagramClone"
+            android:text="InstagramC" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
