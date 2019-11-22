@@ -157,7 +157,7 @@ public class StarterApplication extends Application {
       }
 
       //GET USERs list
-//          ParseQuery<ParseUser> query = ParseQuery.getQuery("User"); //Gets the TABLE/object class
+//      ParseQuery<ParseUser> query = ParseUser.getQuery(); //Gets the User table/object class
 //
 //          query.whereNotEqualTo("username", ParseUser.getCurrentUser().getUsername());//where current user is not in list
 //          query.addAscendingOrder("username");

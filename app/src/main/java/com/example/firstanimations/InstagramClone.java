@@ -120,12 +120,26 @@ public class InstagramClone extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instagram_clone);
 
+
+        //=============================================================================================
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
+
+        // Add your initialization code here - get this from Putty, OR connection to Parse Server
+        Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
+                .applicationId(BuildConfig.PARSER_APP_ID)//appId
+                .clientKey(BuildConfig.PARSER_CLIENT_ID)//masterKey
+                .server("http://3.17.4.96:80/parse/")//serverURL - add a slash at the end .../parse/
+                .build()
+        );
+
         //If user is already logged in, move him in.
         if(ParseUser.getCurrentUser() != null){
             Log.d(TAG, "Signed in user info: " + ParseUser.getCurrentUser().getUsername());
             //Move user inside
             moveInside();
         }
+        //=============================================================================================
 
         ImageView logoImageView = (ImageView) findViewById(R.id.instaImageView);
         RelativeLayout backgroundLayout = (RelativeLayout) findViewById(R.id.instaRelLayout);
@@ -142,42 +156,33 @@ public class InstagramClone extends AppCompatActivity implements View.OnClickLis
         //Attach a onKey listener to the password EditText (implemented:  implements  View.OnKeyListener)
         password.setOnKeyListener(this);
 
-        //=============================================================================================
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
-
-        // Add your initialization code here - get this from Putty, OR connection to Parse Server
-        Parse.initialize(new Parse.Configuration.Builder(getApplicationContext())
-                .applicationId(BuildConfig.PARSER_APP_ID)//appId
-                .clientKey(BuildConfig.PARSER_CLIENT_ID)//masterKey
-                .server("http://3.17.4.96:80/parse/")//serverURL - add a slash at the end .../parse/
-                .build()
-        );
-
         //###########################################################################################################
         //Tracks the Activity OR Application usage
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
         //####################################################################################################
     }
 
-//    @Override
-//    public void onBackPressed() {
-//        super.onBackPressed();
-//        //CUSTOM logout
-//        //ParseUser.getCurrentUser()//GETS logged in user INFO
-//        if(ParseUser.getCurrentUser() != null){
-//            Log.d(TAG, "Signed in user info: " + ParseUser.getCurrentUser().getUsername());
-//            //LOG user out
-//            ParseUser.logOut();
-//        } else {
-//            Log.d(TAG, "No user is Logged in");
-//        }
-//        Parse.destroy();
-//        finish();
-//    }
+    //I need this, since Parse should be in a separate file, like "StarterApplication"
+    // and added to the Manifest -> main Application android:name=".StarterApplication"
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        //CUSTOM logout
+        //ParseUser.getCurrentUser()//GETS logged in user INFO
+        if(ParseUser.getCurrentUser() != null){
+            Log.d(TAG, "Signed in user info: " + ParseUser.getCurrentUser().getUsername());
+            //LOG user out
+            ParseUser.logOut();
+        } else {
+            Log.d(TAG, "No user is Logged in");
+        }
+        Parse.destroy();
+        finish();
+    }
 
     public void moveInside(){
         Intent ni = new Intent(InstagramClone.this, IntagramCloneInside.class);
         startActivity(ni);
+        finish();
     }
 }
