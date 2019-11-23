@@ -72,6 +72,9 @@ public class IntagramCloneInside extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d(TAG, "Position: "+position);
+                Intent intent = new Intent(getApplicationContext(), InstagramCloneInsideImages.class);
+                intent.putExtra("usernameSelected", usernames.get(position));
+                startActivity(intent);
             }
         });
 
@@ -134,7 +137,7 @@ public class IntagramCloneInside extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         //data will hold the Uri
         Uri selectedImageUri = data.getData();//get the DEVICE uri location of the image
-        Log.d(TAG, "onActivityResult: Image URI: "+selectedImageUri);
+        Log.d(TAG, "onActivityResult: Image URI: "+selectedImageUri);//something like content://media/external/images/media/15263
 
         if(requestCode == MEDIA_ACCESS_PERMISSION_CODE && resultCode == RESULT_OK && data != null){
             try{

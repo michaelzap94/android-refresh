@@ -18,7 +18,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".IntagramCloneInside"></activity>
+        <activity android:name=".InstagramCloneInsideImages"></activity>
+        <activity android:name=".IntagramCloneInside" />
         <activity android:name=".InstagramClone" />
         <activity
             android:name=".NewsReaderWebView"
