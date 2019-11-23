@@ -20,7 +20,9 @@
         android:theme="@style/AppTheme">
         <activity android:name=".InstagramCloneInsideImages"></activity>
         <activity android:name=".IntagramCloneInside" />
-        <activity android:name=".InstagramClone" />
+        <activity android:name=".InstagramClone"
+            android:label="InstagramClone">
+        </activity>
         <activity
             android:name=".NewsReaderWebView"
             android:configChanges="orientation|keyboardHidden|screenSize"

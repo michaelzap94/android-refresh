@@ -9,7 +9,11 @@
 package com.example.firstanimations;
 
 import android.app.Application;
+import android.graphics.Bitmap;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.LogInCallback;
@@ -17,12 +21,14 @@ import com.parse.Parse;
 import com.parse.ParseACL;
 import com.parse.ParseAnalytics;
 import com.parse.ParseException;
+import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
+import java.io.ByteArrayOutputStream;
 import java.util.List;
 
 
@@ -44,6 +50,11 @@ public class StarterApplication extends Application {
               .build()
       );
 
+
+      //WE CAN STORE: BASIC: ParseObject, COMPLEX: ParseFile, USERS: ParseUser;
+
+
+      //STORE BASIC DATA
 //        //Create a Class Object/Table/Schema - e.g: Score.============================
 //        ParseObject score = new ParseObject("Score");
 //        score.put("username", "mike");//String
@@ -62,6 +73,48 @@ public class StarterApplication extends Application {
 //            }
 //        });
 //        //============================================================================
+
+      //STORE COMPLEX DATA, e.g: files, images, videos, etc: ----------> CHECK InstagramCloneInside
+
+//      //data will hold the Uri
+//      Uri selectedImageUri = data.getData();//get the DEVICE uri location of the image
+//      Log.d(TAG, "onActivityResult: Image URI: "+selectedImageUri);//something like content://media/external/images/media/15263
+//      Bitmap bitmapImageFromSelectedImageUri = MediaStore.Images.Media.getBitmap(this.getContentResolver(), selectedImageUri);
+//      //YOU COULD ASSIGN IT TO AN ImageView and display it
+//      //ImageView imageView = findViewById(R.id.imageView);
+//      //imageView.setImageBitmap(bitmapImageFromSelectedImageUri);
+//      //BUT, instead Parse the image so you can store it
+//
+//      //
+//      ByteArrayOutputStream stream = new ByteArrayOutputStream();
+//      //Compress the Bitmap into a PNG, with quality 100, USING ByteArrayOutputStream stream
+//      bitmapImageFromSelectedImageUri.compress(Bitmap.CompressFormat.PNG, 100, stream);
+//      //Array of bytes
+//
+//      //convert the Stream to a byte array
+//      byte byteArray[] = stream.toByteArray();
+//
+//      //Create a file object, able to hold a byteArray that when decompressed, will be a PNG
+//      ParseFile fileHoldingByteArrayWithBitmapCompressed = new ParseFile("image.png", byteArray);
+//
+//      ParseObject images = new ParseObject("Image");
+//      images.put("username", ParseUser.getCurrentUser().getUsername());//String
+//      images.put("image", fileHoldingByteArrayWithBitmapCompressed);//Bitmap
+//
+//      //score.save();//WILL PAUSE YOUR APP, it RUNs ON MAIN THREAD
+//
+//      images.saveInBackground(new SaveCallback() {
+//          @Override
+//          public void done(ParseException ex) { //ONCE done
+//              if (ex == null) {
+//                  Log.i("Parse Result", "Successful!");
+//                  Toast.makeText(IntagramCloneInside.this, "Image has been shared", Toast.LENGTH_SHORT).show();
+//              } else {
+//                  Log.i("Parse Result", "Failed" + ex.toString());
+//                  Toast.makeText(IntagramCloneInside.this, "Image could not be shared", Toast.LENGTH_SHORT).show();
+//              }
+//          }
+//      });
 
       //Query=========================================================================
 

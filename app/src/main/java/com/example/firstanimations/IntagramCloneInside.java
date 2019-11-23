@@ -56,6 +56,10 @@ public class IntagramCloneInside extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_intagram_clone_inside);
 
+        //SET TITLE=========================================================================
+        setTitle("Welcome "+ParseUser.getCurrentUser().getUsername() );
+        //==================================================================================
+
         usernames = new ArrayList<String>();
 
         arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, usernames);

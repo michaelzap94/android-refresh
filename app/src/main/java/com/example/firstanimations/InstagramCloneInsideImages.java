@@ -18,6 +18,7 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.List;
 
@@ -28,13 +29,15 @@ public class InstagramCloneInsideImages extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instagram_clone_inside_images);
-
+        String usernameSelected;
         linearLayout = findViewById(R.id.instaLinearLayout);
 
-        String usernameSelected;
         Intent fromIntent = getIntent();
         if(fromIntent.hasExtra("usernameSelected")){
             usernameSelected = fromIntent.getStringExtra("usernameSelected");
+            //SET TITLE=========================================================================
+            setTitle(usernameSelected + "'s photos" );
+            //==================================================================================
             queryImages(usernameSelected);
         } else {
 
