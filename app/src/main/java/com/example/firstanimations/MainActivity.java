@@ -108,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void intentBluetooth(View view){
+        Intent intent = new Intent(MainActivity.this, Bluetooth.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;
