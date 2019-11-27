@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Tweet"
+        android:id="@+id/twitter_tweet"></item>
+    <item android:title="My Feed"
+        android:id="@+id/twitter_feed"></item>
+    <item android:title="Logout"
+        android:id="@+id/twitter_logout"></item>
+</menu>
