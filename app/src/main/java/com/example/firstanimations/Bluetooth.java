@@ -108,6 +108,16 @@ public class Bluetooth extends AppCompatActivity {
         //BLUETOOTH=====================================================================================================
         //Allows us to work with the BluetoothAdapter;
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (bluetoothAdapter == null) {
+            // Device does not support Bluetooth
+        } else if (!bluetoothAdapter.isEnabled()) {
+            // Bluetooth is not enabled :)
+            bluetoothAdapter.enable();// THIS WILL ENABLE bluetooth.
+            //bluetoothAdapter.disable(); --------------> will disable it
+        } else {
+            // Bluetooth is enabled
+        }
+
         //What actions we can accept, we also need to add a broadcastReceiver to handle the Intents we receive
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(BluetoothAdapter.ACTION_STATE_CHANGED);

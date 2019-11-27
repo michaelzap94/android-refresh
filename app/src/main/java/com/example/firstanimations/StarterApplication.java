@@ -229,7 +229,15 @@ public class StarterApplication extends Application {
 //                  }
 //              }
 //          });
+      //Add to a LIST/Array field in Users
+        ParseUser.getCurrentUser().add("someArrayColumn", "something");
+      //Remove from a LIST/Array field in Users
+        List array = ParseUser.getCurrentUser().getList("someArrayColumn");
+        array.remove("something");
 
+        List tempUsers = ParseUser.getCurrentUser().getList("someArrayColumn");
+        ParseUser.getCurrentUser().remove("someArrayColumn");
+        ParseUser.getCurrentUser().put("someArrayColumn",tempUsers);
 
       //======================================
     ParseUser.enableAutomaticUser();

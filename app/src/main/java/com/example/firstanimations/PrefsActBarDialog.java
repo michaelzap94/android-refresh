@@ -59,19 +59,22 @@ public class PrefsActBarDialog extends AppCompatActivity {
     //##############################################################################################################################
 
     public void dialogPopUp(){
+        //final EditText editText = new EditText(this);
         new AlertDialog.Builder(this).setIcon(android.R.drawable.ic_dialog_alert)
                 .setTitle("Are you sure")// Title
                 .setMessage("Do you definitely want to do this?") // Body
+                //OR .setView(editText)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Toast.makeText(PrefsActBarDialog.this, "It's done", Toast.LENGTH_SHORT).show();
+                        //OR do something with the text from the editText -> editText.getText().toString()
                     }
                 })
 //                .setNegativeButton("No", new DialogInterface.OnClickListener() {
 //                    @Override
 //                    public void onClick(DialogInterface dialog, int which) {
-//
+//                          dialog.cancel();
 //                    }
 //                })
                 //OR IF YOU DON'T WANT TO DO ANYTHING, JUST CLOSE THE DIALOG

@@ -112,6 +112,11 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, Bluetooth.class);
         startActivity(intent);
     }
+
+    public void intentTwitterClone(View view){
+        Intent intent = new Intent(MainActivity.this, TwitterClone.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;
