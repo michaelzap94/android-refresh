@@ -5,6 +5,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -49,7 +50,7 @@ public class TwitterCloneInside extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.twitterListView);
         listView.setAdapter(arrayAdapter);
         listView.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);//Sets a check box in each item
-        getAllUers();
+        getAllUsers();
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
@@ -75,7 +76,7 @@ public class TwitterCloneInside extends AppCompatActivity {
 
     }
 
-    private void getAllUers(){
+    private void getAllUsers(){
 
         ParseQuery<ParseUser> query = ParseUser.getQuery(); //Gets the User table/object class
 
@@ -179,7 +180,8 @@ public class TwitterCloneInside extends AppCompatActivity {
                 dialogPopUp();
                 return true;
             case R.id.twitter_feed:
-
+                Intent ni = new Intent(TwitterCloneInside.this, TwitterCloneInsideFeed.class);
+                startActivity(ni);
                 return true;
             case R.id.twitter_logout:
                 mLogout();
