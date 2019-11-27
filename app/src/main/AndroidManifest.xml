@@ -13,7 +13,6 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,12 +20,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Bluetooth"></activity>
+        <activity android:name=".TwitterCloneInsideFeed"></activity>
+        <activity android:name=".TwitterCloneInside" />
+        <activity android:name=".TwitterClone" />
+        <activity android:name=".Bluetooth" />
         <activity android:name=".InstagramCloneInsideImages" />
         <activity android:name=".IntagramCloneInside" />
         <activity
             android:name=".InstagramClone"
-            android:label="InstagramClone"></activity>
+            android:label="InstagramClone" />
         <activity
             android:name=".NewsReaderWebView"
             android:configChanges="orientation|keyboardHidden|screenSize"
