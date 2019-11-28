@@ -20,7 +20,38 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TwitterCloneInsideFeed"></activity>
+        <activity android:name=".WhatsappCloneInsideChat"></activity>
+        <activity android:name=".WhatsappCloneInside" />
+        <activity android:name=".WhatsappClone" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".UberCloneDriverMap"
+            android:label="@string/title_activity_uber_clone_driver_map">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.UberCloneDriver" />
+        </activity>
+        <activity android:name=".UberCloneDriver" />
+        <activity
+            android:name=".UberCloneRider"
+            android:label="@string/title_activity_uber_clone_rider">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.firstanimations.UberClone" />
+        </activity>
+        <activity android:name=".UberClone" />
+        <activity android:name=".TwitterCloneInsideFeed" />
         <activity android:name=".TwitterCloneInside" />
         <activity android:name=".TwitterClone" />
         <activity android:name=".Bluetooth" />
@@ -50,18 +81,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.firstanimations.MainActivity" />
         </activity>
-        <!--
-             The API key for Google Maps-based APIs is defined as a string resource.
-             (See the file "res/values/google_maps_api.xml").
-             Note that the API key is linked to the encryption key used to sign the APK.
-             You need a different API key for each encryption key, including the release key that is used to
-             sign the APK for publishing.
-             You can define the keys for the debug and release targets in src/debug/ and src/release/.
-        -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key" />
-
         <activity
             android:name=".MapsActivityMemorablePlaces"
             android:label="@string/title_activity_maps_memorable_places">

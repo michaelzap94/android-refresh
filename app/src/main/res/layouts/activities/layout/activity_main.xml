@@ -180,29 +180,29 @@
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:onClick="intentTODO"
-            android:text="TODO" />
+            android:onClick="intentUberClone"
+            android:text="UberClone" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:onClick="intentTODO"
-            android:text="TODO" />
+            android:onClick="intentWhatsappClone"
+            android:text="Whatsapp" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:onClick="intentTODO"
-            android:text="TODO" />
+            android:onClick="intentSnapchatClone"
+            android:text="Snapchat" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:layout_gravity="fill_horizontal"
-            android:onClick="intentTODO"
-            android:text="TODO" />
+            android:onClick="intentFlappyBird"
+            android:text="FlappyBird" />
 
     </GridLayout>
 

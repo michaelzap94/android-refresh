@@ -50,6 +50,8 @@ public class StarterApplication extends Application {
               .build()
       );
 
+      //Only one GeoPoint variable is allowed per Parse class.
+      //By default, a ParseObject created by one user cannot be read or written to by another user.
 
       //WE CAN STORE: BASIC: ParseObject, COMPLEX: ParseFile, USERS: ParseUser;
 

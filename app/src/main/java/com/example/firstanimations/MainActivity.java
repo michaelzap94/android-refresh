@@ -117,6 +117,26 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, TwitterClone.class);
         startActivity(intent);
     }
+
+    public void intentUberClone(View view){
+        Intent intent = new Intent(MainActivity.this, UberClone.class);
+        startActivity(intent);
+    }
+
+    public void intentWhatsappClone(View view){
+        Intent intent = new Intent(MainActivity.this, WhatsappClone.class);
+        startActivity(intent);
+    }
+
+    public void intentSnapchatClone(View view){
+        Intent intent = new Intent(MainActivity.this, TwitterClone.class);
+        startActivity(intent);
+    }
+
+    public void intentFlappyBird(View view){
+        Intent intent = new Intent(MainActivity.this, TwitterClone.class);
+        startActivity(intent);
+    }
     //END INTENTS=======================================================
 
     MediaPlayer mediaPlayer;

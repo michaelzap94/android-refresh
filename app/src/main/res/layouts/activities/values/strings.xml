@@ -1,1 +1,4 @@
-<resources></resources>
+<resources>
+    <string name="title_activity_uber_clone_rider">Map</string>
+    <string name="title_activity_uber_clone_driver_map">Map</string>
+</resources>
